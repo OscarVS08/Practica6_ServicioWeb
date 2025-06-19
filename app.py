@@ -43,5 +43,5 @@ def eliminar_pedido(id):
     pedidos = [p for p in pedidos if p["id"] != id]
     return jsonify({"mensaje": "Pedido eliminado"})
 
-if __name__ == '__main__':
-    app.run(debug=True)
+#if __name__ == '__main__':
+#    app.run(debug=True)
