@@ -43,5 +43,12 @@ def eliminar_pedido(id):
     pedidos = [p for p in pedidos if p["id"] != id]
     return jsonify({"mensaje": "Pedido eliminado"})
 
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))  # Cloud Run pasa el puerto por esta variable
+    app.run(host="0.0.0.0", port=port)        # Escucha en todas las interfaces
+
+
 #if __name__ == '__main__':
 #    app.run(debug=True)
